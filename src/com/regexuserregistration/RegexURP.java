@@ -1,10 +1,11 @@
 package com.regexuserregistration;
 
 public class RegexURP {
-    public static void main(String[] args) {
-        System.out.println("Welcome to the User Registration Problem using Regex!!");
-        UserOperator user = new UserOperator();
-        user.firstName("Rajendra");
-        user.lastName("Gund");
-    }
+	public static void main(String[] args) {
+		System.out.println(".............Welcome to the User Registration Problem.......");
+		UserOperator user = new UserOperator();
+		user.firstName("Mohin");
+		user.lastName("Sayyad");
+		user.emailaddress("mohin@gmail.com");
+	}
 }
