@@ -53,15 +53,17 @@ public class UserOperator {
 	}
 
 	public void passward(String passward) {
-		// String regex = "^(?=.*[A-Z]){1}(?=.*[a-z]).{8,}$";
-		String regex = "^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9]).{8,}$";
-		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(passward);
-		boolean valid = matcher.matches();
-		if (valid == true) {
-			System.out.println("Your Passward " + passward + " is Valid");
-		} else {
-			System.out.println("Your Passward " + passward + " is Invalid");
-		}
-	}
+        // String regex = "^[0-9a-zA-Z]{8,}$";
+        // String regex = "^(?=.*[A-Z]){1}(?=.*[a-z]).{8,}$";
+        // String regex = "^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9]).{8,}$";
+        String regex = "^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%!]).{8,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(passward);
+        boolean valid = matcher.matches();
+        if (valid == true) {
+            System.out.println("Your Passward " + passward + " is Valid");
+        } else {
+            System.out.println("Your Passward " + passward + " is Invalid");
+        }
+    }
 }
